@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-gradient-from: #FDEFF6;
+  --bg-gradient-to: #FBE4F0;
+  --sidebar-from: #4A0D3F;
+  --sidebar-to: #7A1259;
+  --primary-magenta: #B5179E;
+  --primary-dark: #7A1259;
+  --accent-pink: #E14DB0;
+  --light-pink: #F8B4D9;
+  --pink-tint: #FCE4F1;
+  --card-border: #F6D3E6;
+  --text-heading: #3B0A33;
+  --text-body: #6B4A62;
+  --text-muted: #A98AA0;
+}
+
+body {
+  background: linear-gradient(135deg, #FDEFF6 0%, #FBE4F0 100%);
+  background-attachment: fixed;
+  color: #6B4A62;
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Poppins', sans-serif;
+  color: #3B0A33;
+}
+
+/* Custom Scrollbars in Plum */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FBE4F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E14DB0;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B5179E;
+}
+
+/* Plum Magenta Blush Card Base */
+.plum-card,
+.luxe-card {
+  background-color: #FFFFFF;
+  border: 1px solid #F6D3E6;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(181, 23, 158, 0.08);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #6B4A62;
+}
+
+.plum-card-hover:hover,
+.luxe-card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(181, 23, 158, 0.14);
+  border-color: #E14DB0;
+}
+
+/* Glassmorphism panel */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid #F6D3E6;
+}
+
+/* Recharts Tooltip Custom Style */
+.recharts-default-tooltip {
+  background-color: #FFFFFF !important;
+  border: 1px solid #F6D3E6 !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 8px 24px rgba(181, 23, 158, 0.12) !important;
+  padding: 10px 14px !important;
+  font-family: 'Poppins', sans-serif !important;
+  color: #3B0A33 !important;
+}
+
+/* Soft shimmer animation for skeletons in blush tint */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(90deg, #FDEFF6 25%, #FCE4F1 50%, #FDEFF6 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite;
+}
